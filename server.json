@@ -1,6 +1,23 @@
 {
-  "name": "vpnsmith-mcp",
-  "description": "Read-only VPN prices (NordVPN, Surfshark, Proton VPN), read daily from official pages, dated per reading.",
-  "remotes": [{ "type": "streamable-http", "url": "https://www.vpnsmith.com/mcp" }],
-  "website_url": "https://www.vpnsmith.com"
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.vpnsmith/vpn-offers",
+  "title": "VPNSmith VPN offers",
+  "description": "Dated VPN prices read from merchant pages (NordVPN, Surfshark, Proton). Price history via API key.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.vpnsmith.com/llms.txt",
+  "repository": { "url": "https://github.com/ricco020/vpnsmith-mcp", "source": "github" },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.vpnsmith.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Bearer vps_... key (49 EUR/month at https://www.vpnsmith.com/api/mcp-key) unlocks get_price_history. get_offers is free.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
 }

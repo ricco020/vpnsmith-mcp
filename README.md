@@ -21,3 +21,7 @@ Client config (remote server):
 ```
 
 Site: https://www.vpnsmith.com
+
+## MCP Registry
+
+Listed in the official MCP Registry as `com.vpnsmith/vpn-offers` (domain-verified on vpnsmith.com). Registry entry: `server.json` in this repository.
