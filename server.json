@@ -1,0 +1,6 @@
+{
+  "name": "vpnsmith-mcp",
+  "description": "Read-only VPN prices (NordVPN, Surfshark, Proton VPN), read daily from official pages, dated per reading.",
+  "remotes": [{ "type": "streamable-http", "url": "https://www.vpnsmith.com/mcp" }],
+  "website_url": "https://www.vpnsmith.com"
+}
